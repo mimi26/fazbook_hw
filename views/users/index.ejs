@@ -9,6 +9,11 @@
     <a href="users/new">Add new user</a>
     <% users.forEach(function(user) { %>
       <div>
+
+      <form action="<%= '/users/' + user.id + '?_method=DELETE' %>" method="POST">
+      <button type="submit">x</button>
+      </form>
+        <span><%= user.id %></span>
         <span><%= user.email %></span>
         <span><%= user.firstname %></span>
         <span><%= user.lastname %></span>
